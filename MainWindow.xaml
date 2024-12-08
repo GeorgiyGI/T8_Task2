@@ -1,0 +1,39 @@
+﻿<Window x:Class="Task2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="525">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Метка для сгенерированной строки -->
+        <Label x:Name="GeneratedLabel" Content="Generated String" 
+               FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <!-- Поле ввода для строки -->
+        <TextBox x:Name="GetKey" Grid.Row="1" Margin="0,0,0,10" 
+                 VerticalAlignment="Top" HorizontalAlignment="Stretch" 
+                 Height="30" FontSize="14" />
+
+        <!-- Кнопка для обработки -->
+        <Button Grid.Row="1" Margin="0,0,0,10" Content="Обработать" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" 
+                Width="100" Click="ProcessButton_Click"/>
+
+        <!-- Панель для отображения результатов -->
+        <StackPanel x:Name="ResultPanel" Grid.Row="1" Margin="0,50,0,0"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    Orientation="Horizontal"/>
+    </Grid>
+</Window>
